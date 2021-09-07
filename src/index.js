@@ -3,14 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './components/app';
 class WhoAmI extends Component {
-    state = {
-        years: 26
-    }
-
-    nextYear = () => {
-        this.setState(state => ({
-            years: ++state.years
-        }))
+    constructor (props) {
+        super(props)
+        this.state = {
+            years: 26
+        }
+        this.nextYear = () => {
+            this.setState(state => ({
+                years: ++state.years
+            }))
+        }
     }
 
     render() {
@@ -28,7 +30,7 @@ const All = () => {
     return(<>
         <WhoAmI name='John' surname='Bond' link='https://vk.com/'/>
         <WhoAmI name='Igor' surname='Vasya' link='https://vk.com/'/>
-        <WhoAmI name='Vasya' surname='Pupkin' link='https://vk.com/'/>
+        <WhoAmI name='Ivan' surname='Drago' link='https://vk.com/'/>
     </>)
 }
 
