@@ -6,6 +6,17 @@ import PostStatusFilter from "../post-status-filter";
 import SearchPanel from "../search-panel";
 
 import './app.css'
+// import style from './App.module.css'
+import styled from 'styled-components'
+
+const AppBlock = styled.div`
+    margin: 0 auto;
+    max-width: 800px;
+`
+
+const StyledAppBlock = styled(AppBlock)`
+    backgrond: grey;
+`
 
 const App = () => {
 
@@ -28,7 +39,7 @@ const App = () => {
     ]
 
     return (
-    <div className='app'>
+    <StyledAppBlock>
         <AppHeader />
         <div className='search-panel d-flex'>
             <SearchPanel />
@@ -36,7 +47,7 @@ const App = () => {
         </div>
         <PostList posts={data}/>
         <PostAddForm/>
-    </div>)
+    </StyledAppBlock>)
 }
 
 export default App
